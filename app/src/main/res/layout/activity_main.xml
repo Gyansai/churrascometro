@@ -123,19 +123,47 @@
 
     <Button
         android:id="@+id/barbecueCalc"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="258dp"
-        android:layout_height="54dp"
-        android:background="@android:color/holo_red_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mybutton"
         android:text="Churrascar"
-        android:textColor="@android:color/holo_orange_light"
-        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:shadowRadius="2"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.667" />
+
+    <selector xmlns:android="http://schemas.android.com/apk/res/android" >
+        <item android:state_pressed="true" >
+            <shape android:shape="rectangle"  >
+                <corners android:radius="3dip" />
+                <stroke android:width="1dip" android:color="#5e7974" />
+                <gradient android:angle="-90" android:startColor="#345953" android:endColor="#689a92"  />
+            </shape>
+        </item>
+        <item android:state_focused="true">
+            <shape android:shape="rectangle"  >
+                <corners android:radius="3dip" />
+                <stroke android:width="1dip" android:color="#5e7974" />
+                <solid android:color="#58857e"/>
+            </shape>
+        </item>
+        <item >
+            <shape android:shape="rectangle"  >
+                <corners android:radius="3dip" />
+                <stroke android:width="1dip" android:color="#5e7974" />
+                <gradient android:angle="-90" android:startColor="#8dbab3" android:endColor="#58857e" />
+            </shape>
+        </item>
+    </selector>
+
 
 
     <TextView
